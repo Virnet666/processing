@@ -1,0 +1,26 @@
+cara=-0.5
+sara=-1
+coni=255
+coni2=255
+coni3=255
+def setup():
+    size(600,600)
+    background(0,0,0)
+def draw():
+    global cara
+    global sara
+    global coni
+    global coni2
+    global coni3
+    fill(coni,coni2,coni3)
+    ellipse(random(0,600),random(0,600),10,10) 
+
+    coni = coni +sara
+    coni2 = coni2 +cara
+    coni3 = coni3 +cara
+    if mousePressed == True:
+        sara=1
+        cara=0.5
+    else:  
+        sara=-1
+        cara=-0.5  
