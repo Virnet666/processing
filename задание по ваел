@@ -1,0 +1,18 @@
+x=15
+y=15
+a=0
+z=0
+def setup():
+    size(600,600)
+def draw():
+    global x,y,a,z
+    fill(random(0,255),random(0,255),random(0,255))
+    while x < 610:
+        ellipse(x,y,30,30)
+        x=x+21
+        y=y+21
+    a=a+1
+    x=15
+    y=15
+    y=y+a
+    x=x-a
