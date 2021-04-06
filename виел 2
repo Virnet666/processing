@@ -1,0 +1,24 @@
+x=0
+y=0
+f=0
+def setup():
+    size (600,600)
+    background(0)
+def draw():
+    global f
+    global x
+    global y
+    rectMode (CENTER)
+    while x>=600 and y>=600:
+          background(0)
+          x=0
+          y=0
+          f=0
+    if x<=600 and y<=600:
+          fill(random(0,255,),random(0,255,),random(0,255,))
+          translate(300,300)
+          rotate(f)
+          rect (0,0,x,y)
+          x=x+0.5
+          y=y+0.5
+          f=f+2
