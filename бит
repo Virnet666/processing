@@ -1,0 +1,23 @@
+x=0
+y=200
+def setup():
+    size(600,600)
+def draw():
+    global x,y
+    translate(300,300)
+    rotate(radians(y))
+    stroke(random(0,255),random(0,255),random(0,255))
+    fill(x,x,x)
+    ellipse(0,100,50,100)
+    ellipse(0,0,100,100)
+    ellipse(0,175,50,30)
+    ellipse(0,205,105,30)
+    y=y+1
+    if mousePressed and (mouseButton==LEFT):
+        x=x+1
+        if x==256:
+            x=255
+        if x==0:
+            x=1
+    else:
+        x=x-1
