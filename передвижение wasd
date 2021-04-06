@@ -1,0 +1,29 @@
+x=300
+z=300
+r=127.5
+g=127.5
+b=127.5
+def setup():
+    size(600,600)
+def draw():
+    global x
+    global z
+    global r
+    global g
+    global b
+    background(0)
+    fill(r,g,b)
+    ellipse(x,z,50,50)
+    if keyPressed:
+        if key == "w" or key == "W":
+            r=r-1
+            z=z-5
+        if key == "s" or key == "S":
+            r=r+1
+            z=z+5
+        if key == "a" or key == "A":
+            b=b-1
+            x=x-5
+        if key == "d" or key == "D":
+            x=x+5    
+            b=b+1
