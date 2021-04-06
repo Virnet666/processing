@@ -1,0 +1,19 @@
+tyu=0
+rty=0
+rtyu=0
+def setup():
+    size(600,600)
+    strokeWeight(60)
+def draw():
+    background(0)
+    stroke(random(0,255),random(0,255),random(0,255))
+    global tyu,rtyu
+    global rty
+    translate(600/2,600/2)
+    rotate(radians(rty))
+    for setar in range(12):
+        rotate(radians(60))
+        for x in range(1,7+1):
+            point(x*60,0)
+    rty=rty+rtyu
+    rtyu=rtyu+0.01
